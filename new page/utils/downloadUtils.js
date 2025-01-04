@@ -1,4 +1,9 @@
-function createZipContent(files) {
+function reportError(error) {
+    console.error('Error:', error);
+    // Additional error reporting logic can be added here
+}
+
+function createZipContent() {
     try {
         const zipContent = {
             'README.md': `# Background Effect Component

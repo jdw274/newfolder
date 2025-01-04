@@ -1,3 +1,5 @@
+import React from 'react';
+
 function FeatureCard({ icon, title, description }) {
     return (
         <div className="feature-card p-6" data-name="feature-card">

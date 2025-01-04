@@ -1,3 +1,5 @@
+import React from 'react';
+
 function BackgroundEffect() {
     return (
         <div data-name="background-effects-container">

@@ -1,3 +1,8 @@
+import React from 'react';
+import BackgroundEffect from './components/BackgroundEffect';
+import GlassmorphicCard from './components/GlassmorphicCard';
+import GlassmorphicCardDark from './components/GlassmorphicCardDark';
+
 function App() {
     return (
         <div className="relative min-h-screen bg-white" data-name="app-container">

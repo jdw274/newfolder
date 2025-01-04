@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Chart({ title }) {
     return (
         <div className="chart-container p-6" data-name="chart-section">

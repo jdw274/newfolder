@@ -1,3 +1,6 @@
+import React from 'react';
+import { downloadZip } from '../utils/downloadUtils';
+
 function DownloadButton() {
     return (
         <button 

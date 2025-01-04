@@ -1,3 +1,7 @@
+import React from 'react';
+import StatCard from './StatCard';
+import Chart from './Chart';
+
 function Dashboard() {
     return (
         <div className="dashboard-container p-6 mx-auto max-w-6xl mt-12" data-name="dashboard">

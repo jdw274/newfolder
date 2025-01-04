@@ -1,0 +1,83 @@
+.glowing-ring {
+    position: fixed;
+    width: 800px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, 
+        rgba(124, 58, 237, 0) 0%,
+        rgba(124, 58, 237, 0.05) 30%,
+        rgba(124, 58, 237, 0.2) 45%,
+        rgba(163, 117, 237, 0.4) 50%,
+        rgba(124, 58, 237, 0.2) 55%,
+        rgba(124, 58, 237, 0.05) 70%,
+        rgba(124, 58, 237, 0) 100%
+    );
+    filter: blur(30px);
+    animation: glow 8s infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glowing-ring::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, 
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.03) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    filter: blur(15px);
+    opacity: 0.8;
+    animation: pulse 4s infinite;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1) rotate(180deg);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
